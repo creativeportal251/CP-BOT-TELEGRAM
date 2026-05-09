@@ -1,12 +1,15 @@
 """
-⚙️ CONFIG — Edit this file to set your bot tokens and customize categories/budgets.
+⚙️ CONFIG — Bot tokens are read from environment variables.
+             Set TELEGRAM_BOT_TOKEN and SEEKER_BOT_TOKEN in your Railway service.
 """
 
+import os
+
 # ─────────────────────────────────────────────────────────
-# 🔑 BOT TOKENS — Get these from @BotFather on Telegram
+# 🔑 BOT TOKENS — Loaded from Railway environment variables
 # ─────────────────────────────────────────────────────────
-EMPLOYER_BOT_TOKEN = "PASTE_YOUR_EMPLOYER_BOT_TOKEN_HERE"
-SEEKER_BOT_TOKEN   = "PASTE_YOUR_SEEKER_BOT_TOKEN_HERE"
+EMPLOYER_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+SEEKER_BOT_TOKEN   = os.getenv("SEEKER_BOT_TOKEN", "")
 
 
 # ─────────────────────────────────────────────────────────
